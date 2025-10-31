@@ -6,7 +6,7 @@ function App() {
   const [recent, setRecent] = useState([]);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
-  const [hazardous, setHazardous] = useState(''); // filter
+  const [hazardous, setHazardous] = useState('');
   const [searched, setSearched] = useState([]);
   const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -22,6 +22,7 @@ function App() {
       const today = new Date();
       const allNEOs = [];
 
+      // Fetch ~3 months of data (12 weeks)
       for (let i = 0; i < 12; i++) {
         const endDate = new Date(today);
         endDate.setDate(today.getDate() - i * 7);
@@ -98,9 +99,37 @@ function App() {
     setSearched(filtered);
   };
 
+  const totalNEOs = data.length;
+  const hazardousCount = data.filter((neo) => neo.is_potentially_hazardous_asteroid).length;
+  const closestMissDistance = data.length
+    ? Math.min(
+        ...data
+          .map((neo) => parseFloat(neo.close_approach_data[0]?.miss_distance.kilometers))
+          .filter((val) => !isNaN(val))
+      ).toFixed(0)
+    : 'N/A';
+
   return (
     <div className="App">
       <h1>NASA Near-Earth Objects Dashboard</h1>
+
+      {/* Summary Stats Section */}
+      {!loading && data.length > 0 && (
+        <div className="summary-stats">
+          <div className="stat-card">
+            <h3>Total Objects</h3>
+            <p>{totalNEOs.toLocaleString()}</p>
+          </div>
+          <div className="stat-card">
+            <h3>Hazardous Objects</h3>
+            <p>{hazardousCount.toLocaleString()}</p>
+          </div>
+          <div className="stat-card">
+            <h3>Closest Miss (km)</h3>
+            <p>{closestMissDistance.toLocaleString()}</p>
+          </div>
+        </div>
+      )}
 
       <label>
         Search by Name:{' '}
