@@ -31,10 +31,12 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![nasa-MadewithClipchamp-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d7f358d3-d8a2-4e34-add5-2b7709377a30)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
+ScreenToGif
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -46,7 +48,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Prativa Khatiwada]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
