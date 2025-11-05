@@ -47,3 +47,50 @@
 .read-the-docs {
   color: #888;
 }
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 220px;
+  background-color: #9fa8ee;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav li {
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.sidebar nav li:hover {
+  text-decoration: underline;
+}
+
+/* Main content styling */
+.main-content {
+  margin-left: 240px; /* Leave space for sidebar */
+  padding: 30px;
+  flex: 1;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
