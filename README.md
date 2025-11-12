@@ -4,7 +4,8 @@ Submitted by: **Prativa Khatiwada**
 
 This web app: **This interactive dashboard visualizes data from NASA’s Near-Earth Object (NEO) API, allowing users to explore recent asteroid encounters and filter by hazard level or name. It also provides key statistics summarizing the number of detected asteroids, hazardous objects, and the closest approach distance.**
 
-Time spent: **10** hours spent in total
+
+Time spent: **10** hours spent in total **(project in progress)**
 
 ## Required Features
 
